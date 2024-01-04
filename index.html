@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Series Display Website</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: #fff;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+    }
+
+    .series-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .series-card {
+      width: 200px;
+      margin: 20px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .series-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .series-card:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Series Display Website</h1>
+  </header>
+
+  <div class="series-container">
+    <div class="series-card" onmouseover="showDescription(this)" onmouseout="hideDescription(this)">
+      <img src="series1.jpg" alt="Series 1">
+      <p class="series-description">Description for Series 1.</p>
+    </div>
+
+    <div class="series-card" onmouseover="showDescription(this)" onmouseout="hideDescription(this)">
+      <img src="series2.jpg" alt="Series 2">
+      <p class="series-description">Description for Series 2.</p>
+    </div>
+
+    <!-- Add more series cards as needed -->
+
+  </div>
+
+  <script>
+    function showDescription(element) {
+      const description = element.querySelector('.series-description');
+      description.style.display = 'block';
+    }
+
+    function hideDescription(element) {
+      const description = element.querySelector('.series-description');
+      description.style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
